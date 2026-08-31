@@ -1,0 +1,29 @@
+# ---- Literature PDFs: never committed ----
+# The repo is PUBLIC. Publisher PDFs (including accepted manuscripts) must not be
+# redistributed here. The ReferencePaper/ tree structure and its README are tracked;
+# the PDFs themselves stay local. See PAPERS_TO_DOWNLOAD.md to rebuild the library.
+*.pdf
+ReferencePaper/**/*.pdf
+
+# ---- LaTeX build artefacts ----
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# ---- OS / editor ----
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# ---- Python ----
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
