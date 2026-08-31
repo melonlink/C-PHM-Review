@@ -143,13 +143,21 @@ This signals both unique axes in the title and does not collide with Fassi 2024.
 2. **TPEL's experimental culture.** TPEL generally expects hardware results. Reviews are formally exempt, but recent TPEL reviews increasingly carry an original quantitative contribution. A purely narrative survey fits this journal's identity poorly.
 3. Contributions A–C are *analytical*, and a reviewer can reasonably ask "where is the power-electronics contribution?" if there is no converter-side evidence.
 
-**Recommendation — do not submit a pure literature review to TPEL.** Choose one:
+**Recommendation — do not submit a pure literature review to TPEL.** Two paths were put to the author:
 
-- **Path 1 — TPEL with a technical spine (higher risk, higher reward).** Add an original experimental/benchmark core: re-implement 3–5 representative methods (ripple-based, RLS, EKF, a data-driven model) on **one common converter and one common aged-capacitor set**, and report accuracy *jointly with* execution time, memory, and MCU/DSP feasibility. That single experiment substantiates Contributions A and C, converts the paper into "review + evidence," and answers objection 3 directly. This is what makes it a TPEL paper rather than a survey.
+- **Path 1 — TPEL with a technical spine (higher risk, higher reward).** Add an original experimental/benchmark core: re-implement 3–5 representative methods (ripple-based, RLS, EKF, a data-driven model) on **one common converter and one common aged-capacitor set**, and report accuracy *jointly with* execution time, memory, and MCU/DSP feasibility.
 
-- **Path 2 — a review-friendly venue (lower risk, still strong).** IEEE JESTPE (explicitly review-receptive, strong PELS standing), IEEE Trans. Industrial Electronics, IEEE Trans. Reliability, or IEEE Open Journal of Power Electronics. Contributions A–D stand on their own without new hardware.
+- **Path 2 — a review-friendly venue (lower risk, still strong).** IEEE JESTPE, IEEE Trans. Industrial Electronics, IEEE Trans. Reliability, or IEEE Open Journal of Power Electronics. Contributions A–D stand on their own without new hardware.
 
-**Decide Path 1 vs Path 2 now, before Stage 1** — Path 1 changes the literature-collection schema, requiring reproducibility metadata (sample rates, processors, execution times, dataset availability) to be *mandatory-fill* rather than best-effort. The `method_evaluation_matrix.csv` schema in the task book already anticipates these fields.
+### ▶ Decision taken: **Path 2** (author, 2026-08-30 — see [D-002](99_logs/decisions.md))
+
+TPEL is not the target. Venue ranking for confirmation at Stage 6: **IEEE JESTPE** (first choice — PELS family, review-receptive, right readership for a deployability argument) → IEEE TIE → IEEE OJPEL → IEEE Trans. Reliability.
+
+**What this changes downstream.** Reproducibility fields in `method_evaluation_matrix.csv` (`Sampling_Rate`, `Processor`, `Real_Time`, `Computation_Cost`, `Code_Available`, `Data_Available`) become **best-effort** rather than mandatory-fill, recorded as `NR` when a paper does not report them.
+
+**Critical caveat:** under Path 2, `NR` is not missing data — **it is the evidence.** With no benchmark of our own, Contribution C rests on what the literature *fails to report*. A high `NR` rate on execution time and processor is itself the quantitative finding: the field cannot be assessed for deployability because it does not report deployability. `NR` counts must therefore be tallied and reported per axis, never silently dropped.
+
+**What does not change.** The §4 repositioning stands regardless of venue. Fassi 2024 will be known to any reviewer in this area, whatever the journal — the capability and deployability axes remain the defensible ground.
 
 ---
 
@@ -197,6 +205,7 @@ If Stage 1 confirms this, it is **not fatal — it is the finding**. The paper t
 
 ## 9. Immediate next actions
 
-1. **User** — obtain the 5 × P0 full texts listed in [papers_to_obtain.csv](02_literature/papers_to_obtain.csv). **D02 (Fassi 2024) and D03 (Yu 2025) are the two that can still change this verdict**; the rest refine it.
-2. **Decide Path 1 (TPEL + benchmark) vs Path 2 (review-friendly venue).** This gates Stage 1's data-collection schema.
-3. On receipt of D02/D03, re-run the gap matrix on full text and finalise the verdict. **Do not begin drafting until then** (task book §21, Stage 0).
+1. ~~Decide Path 1 vs Path 2.~~ **Done — Path 2** ([D-002](99_logs/decisions.md)).
+2. **User (in progress)** — obtain the 5 × P0 full texts listed in [papers_to_obtain.csv](02_literature/papers_to_obtain.csv). **D02 (Fassi 2024) and D03 (Yu 2025) are the two that can still change this verdict**; the rest refine it.
+3. **Stage 1 is on hold** pending D02/D03 ([D-004](99_logs/decisions.md)). Running search and screening under a framing that may still change would waste the screening pass, since inclusion criteria depend on the final taxonomy.
+4. On receipt of D02/D03: re-run the gap matrix at `FULLTEXT` strength → confirm or revise the §4 repositioning → open Stage 1. **Do not begin drafting until then** (task book §21, Stage 0).

@@ -19,8 +19,9 @@ Systematic review project: **Prognostics and Health Management of Capacitors in 
 ## Stage 0 headline
 
 - **Verdict: MODIFY.** A new review is justified — but on a *capability and deployability* axis, **not** on physics-informed intelligence.
-- **Why:** `SOH` occurs **zero times** across three capacitor reviews held in full text (2014, 2020, 2023). So does `deployability`. Meanwhile [Fassi et al. 2024 (TPEL)](https://doi.org/10.1109/TPEL.2023.3328438) already owns the physics-informed framing *in the target journal*.
-- **TPEL:** viable only with an original quantitative spine (a benchmark), not as a pure literature review. TPEL has published two adjacent reviews within 24 months.
+- **Why:** `SOH` occurs **zero times** across three capacitor reviews held in full text (2014, 2020, 2023). So does `deployability`. Meanwhile [Fassi et al. 2024 (TPEL)](https://doi.org/10.1109/TPEL.2023.3328438) already owns the physics-informed framing, in TPEL itself.
+- **Venue: Path 2 — not TPEL** ([D-002](99_logs/decisions.md)). TPEL published two adjacent reviews within 24 months and expects an original quantitative spine from its reviews. Target ranking: **IEEE JESTPE** → TIE → OJPEL → T-Rel.
+- **Stage 1 is on hold** pending the two competitor full texts (D02 Fassi 2024, D03 Yu 2025) — the only acquisitions that can still overturn the verdict.
 
 ## Evidence discipline
 
@@ -48,6 +49,8 @@ Tasks/          Original task specification
 
 ## Next actions
 
-1. Obtain the 5 × P0 full texts in [PAPERS_TO_DOWNLOAD.md](PAPERS_TO_DOWNLOAD.md). **D02 (Fassi 2024) and D03 (Yu 2025) can still change the verdict.**
-2. Decide **Path 1** (TPEL + original benchmark) vs **Path 2** (review-friendly venue: JESTPE / TIE / T-Rel / OJPEL). This gates the Stage 1 data schema.
-3. Re-run the gap matrix on the new full texts, finalise the verdict, then open Stage 1.
+1. ~~Decide venue path.~~ **Done — Path 2, targeting JESTPE first.**
+2. **In progress (user):** obtain the 5 × P0 full texts in [PAPERS_TO_DOWNLOAD.md](PAPERS_TO_DOWNLOAD.md). **D02 (Fassi 2024) and D03 (Yu 2025) can still change the verdict.**
+3. On receipt: re-run the gap matrix at `FULLTEXT` strength, finalise the verdict, then open Stage 1.
+
+Decisions are logged in [99_logs/decisions.md](99_logs/decisions.md).
