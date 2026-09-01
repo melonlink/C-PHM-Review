@@ -25,15 +25,18 @@
 
 一篇论文若跨类别，放主类别，不复制。
 
-## 当前库存（3 篇，均为合法开放获取）
+## 当前库存（12 篇，全部已完成文本提取与身份核验）
 
-| 文件 | 来源通道 | OA 类型 |
-|---|---|---|
-| `00_Reviews_Capacitor/2020_Dang_Kwak_Sensors_HealthMonitoringCapacitors_Review.pdf` | MDPI CDN | Gold |
-| `00_Reviews_Capacitor/2023_Ramees_Ahmad_IEEEAccess_CapacitorHealthMonitoring_Review.pdf` | IEEE Xplore OA 直链 | Gold |
-| `01_Reviews_Adjacent/2014_Wang_Blaabjerg_TIA_ReliabilityDCLinkCapacitors_Overview.pdf` | Aalborg VBN 机构库 | Green/Bronze |
+| 目录 | 篇数 | 内容 |
+|---|---:|---|
+| `00_Reviews_Capacitor/` | 5 | Soliman 2016 · Dang 2020 · Nathan 2023 · Ramees 2023 · Yu 2025 |
+| `01_Reviews_Adjacent/` | 3 | Yang 2010 · Wang & Blaabjerg 2014 · **Fassi 2024** |
+| `02_Failure_Physics/` | 1 | Torki 2023 |
+| `03_CM_ParameterEstimation/` | 3 | Li 2022 · Wang 2025 · Yamasoto 2025 |
 
-OA 状态经 Unpaywall API 确认后才下载；未确认为开放获取的一律不自行抓取，列入下载清单交由用户通过机构订阅获取。
+身份核验：9 篇用户下载的论文中 8 篇由正文内 DOI 自动比对通过；D08（Wang 2025）为 TPEL Letters，正文不印 DOI，已按卷期页 40(8) 10385 + 标题 + 作者比对确认。
+
+其中 3 篇由本会话经 Unpaywall 确认 OA 后自行下载（Dang 2020 走 MDPI CDN，Ramees 2023 走 IEEE OA 直链，Wang 2014 走 Aalborg VBN）。
 
 ## 本机网络限制（供后续参考）
 
