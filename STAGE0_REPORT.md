@@ -1,7 +1,7 @@
 # STAGE 0 REPORT — Scope Lock & Novelty Assessment
 
 **Project:** Capacitor PHM Review (C-PHM-Review)
-**Created:** 2026-08-30 · **Revised:** 2026-08-31 (all 8 reviews now analysed at full-text strength)
+**Created:** 2026-08-30 · **Revised:** 2026-09-01 (9 reviews at full-text strength; R09 added during Stage 1 retrieval)
 **Status:** Stage 0 — **PASS**. Stage 1 authorised.
 
 ---
@@ -13,7 +13,7 @@
 | Novelty verdict | **MODIFY** — confirmed on full text, with three corrections to the 08-30 draft |
 | Is a new capacitor PHM review scientifically justified? | **Yes.** Strengthened, not weakened, by the competitor full texts. |
 | Venue | **Path 2** — IEEE JESTPE first choice ([D-002](99_logs/decisions.md)) |
-| Evidence strength | All 8 reviews now `FULLTEXT`. No claim rests on an abstract. |
+| Evidence strength | All **9** reviews `FULLTEXT`. No claim rests on an abstract. |
 
 **One-sentence answer:** the gap is a **capability and health-state-definition gap**, not a physics-informed gap; and it is now confirmed against the two competitors that could have overturned it.
 
@@ -25,51 +25,55 @@ Three corrections, all made against the author's own earlier draft:
 2. **Fassi 2024 is closer to a capability axis than its abstract suggested.** Its §IV splits data-driven work into CM → Fault Detection/Diagnosis → RUL Prediction. Contribution A is narrowed accordingly (§4A).
 3. **Yu 2025 carries its own 5-method PSCAD benchmark** — new information, not visible from the abstract. Reinforces D-002 (§5).
 
-**The core finding survived all three.** `SOH` is absent from 7 of 8 reviews; no review uses a capability ladder; execution time and memory footprint are absent from all 8.
+**The core finding survived all three.** `SOH` is absent from 8 of 9 reviews; no review uses a capability ladder; execution time and memory footprint are absent from all 9.
+
+### Added 2026-09-01
+
+**R09 — Zhao et al. 2021, IEEE TPEL 36(4):3692-3716, 252 citations** was missed at Stage 0 and surfaced by Stage 1 retrieval. Analysed at full text: SOH=0, RUL=3, prognostics=3, physics-informed=0, execution time=0, memory=0, capability grading=0; organised by **application domain** (ASD / PV / PFC / DC-DC) — a fourth non-capability axis. It **strengthens** the verdict and means TPEL has published **three** adjacent reviews (2021, 2024, 2025), not two. See [D-006](99_logs/decisions.md).
 
 ---
 
 ## 1. Evidence base
 
-All 8 reviews obtained in full text, text-extracted, and machine-analysed. Every DOI Crossref-verified; every PDF identity-checked against its expected DOI in-text (8/9 automatic; D08 confirmed by volume/issue/page/title/author match, being a Letters paper that does not print its DOI in the body).
+All 9 reviews obtained in full text, text-extracted, and machine-analysed. Every DOI Crossref-verified; every PDF identity-checked against its expected DOI in-text (8/9 automatic; D08 confirmed by volume/issue/page/title/author match, being a Letters paper that does not print its DOI in the body).
 
 Two DOIs I attempted to reconstruct from memory returned HTTP 404 at Crossref and were **discarded rather than guessed**.
 
 ---
 
-## 2. Coverage measured across all eight reviews
+## 2. Coverage measured across all nine reviews
 
 Keyword occurrence over complete extracted text:
 
-| | R01 '14 | R02 '16 | R03 '20 | R04 '23 | R05 '23 | R06 '23 | **R07 '24** | **R08 '25** |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| `SOH` / state-of-health | **0** | **0** | **0** | **0** | **0** | 1 | 1 | **0** |
-| `RUL` / remaining useful life | 0 | 2 | 0 | 2 | 3 | 6 | 48 | **0** |
-| `prognostic*` | 2 | 1 | 1 | 2 | **0** | 9 | 22 | **0** |
-| physics-informed / PINN | 0 | 0 | 0 | 2 | 0 | 0 | **136** | 0 |
-| `digital twin` | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 4 |
-| `uncertaint*` | 1 | 0 | 0 | 0 | 1 | 0 | 21 | 1 |
-| transfer learning / domain adapt. | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 0 |
-| Wiener / Gamma / particle filter | 0 | 0 | 0 | 0 | 0 | 0 | 7 | 0 |
-| **capability / maturity level** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** |
-| **execution time / latency** | 0 | **0** | 0 | **0** | **0** | 0 | 2 | **0** |
-| **memory footprint** | 0 | **0** | 0 | **0** | **0** | 0 | **0** | **0** |
+| | R01 '14 | R02 '16 | R03 '20 | **R09 '21** | R04 '23 | R05 '23 | R06 '23 | **R07 '24** | **R08 '25** |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| `SOH` / state-of-health | **0** | **0** | **0** | **0** | **0** | **0** | 1 | 1 | **0** |
+| `RUL` / remaining useful life | 0 | 2 | 0 | 3 | 2 | 3 | 6 | 48 | **0** |
+| `prognostic*` | 2 | 1 | 1 | 3 | 2 | **0** | 9 | 22 | **0** |
+| physics-informed / PINN | 0 | 0 | 0 | **0** | 2 | 0 | 0 | **136** | 0 |
+| `digital twin` | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 2 | 4 |
+| `uncertaint*` | 1 | 0 | 0 | 1 | 0 | 1 | 0 | 21 | 1 |
+| transfer learning / domain adapt. | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 0 |
+| Wiener / Gamma / particle filter | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 7 | 0 |
+| **capability / maturity level** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** | **0** |
+| **execution time / latency** | 0 | **0** | 0 | **0** | **0** | **0** | 0 | 2 | **0** |
+| **memory footprint** | 0 | **0** | 0 | **0** | **0** | **0** | 0 | **0** | **0** |
 
-R07 = Fassi 2024 (TPEL), R08 = Yu 2025 (TPEL) — the two competitors.
+R07 = Fassi 2024 (TPEL), R08 = Yu 2025 (TPEL), R09 = Zhao 2021 (TPEL) — the three TPEL reviews.
 
 ### Three findings that survive scrutiny
 
-**1. The field's reviews have never defined the state they monitor.** `SOH` is absent from 7 of 8 reviews; the two occurrences (Torki, Fassi) are single passing mentions, not definitions. Most striking: **Yu et al. 2025 — a capacitor health-monitoring review in TPEL, published September 2025 — contains zero occurrences of SOH, RUL, and `prognostic*` combined.** A 2025 review of "health monitoring" with no prognostic content is the clearest possible evidence that the field's reviews stop at parameter estimation.
+**1. The field's reviews have never defined the state they monitor.** `SOH` is absent from 8 of 9 reviews; the two occurrences (Torki, Fassi) are single passing mentions, not definitions. Most striking: **Yu et al. 2025 — a capacitor health-monitoring review in TPEL, published September 2025 — contains zero occurrences of SOH, RUL, and `prognostic*` combined.** A 2025 review of "health monitoring" with no prognostic content is the clearest possible evidence that the field's reviews stop at parameter estimation.
 
-**2. No review uses a capability or maturity grading.** Zero hits across all eight for `capability level`, `maturity level`, `PHM level`, `readiness level`, `functional level`. The organising axis is always *how* or *where* measured — never *what health state can be resolved*.
+**2. No review uses a capability or maturity grading.** Zero hits across all nine for `capability level`, `maturity level`, `PHM level`, `readiness level`, `functional level`. The organising axis is always *how* or *where* measured — never *what health state can be resolved*.
 
-**3. Nobody reports what determines embeddability.** Execution time appears twice in one review (Fassi) and nowhere else; memory footprint appears **zero times in all eight**. These are precisely the quantities that decide whether an algorithm fits an MCU.
+**3. Nobody reports what determines embeddability.** Execution time appears twice in one review (Fassi) and nowhere else; memory footprint appears **zero times in all nine**. These are precisely the quantities that decide whether an algorithm fits an MCU.
 
 ### False-positive audit
 
 R05's six apparent `hybrid model` hits were inspected individually: all six mean **hybrid switched-circuit models of boost converters** (refs [34], [55], [56]), not physics-informed ML. Corrected count: **0**. Without this audit an automated sweep would have reported the opposite conclusion.
 
-Full matrix: [review_gap_matrix.csv](00_scope/review_gap_matrix.csv) — 8 reviews × 30 fields, all `FULLTEXT`.
+Full matrix: [review_gap_matrix.csv](00_scope/review_gap_matrix.csv) — 9 reviews × 30 fields, all `FULLTEXT`.
 
 ---
 
@@ -110,7 +114,7 @@ Grade every method on Level 0–7 (Measurement → HI extraction → Parameter e
 
 **Narrowed claim, post-correction.** Fassi 2024 §IV is the closest precedent and must be cited as such. What remains novel: (i) a *graded* axis, finer than a 3-way split; (ii) applied across **all** paradigms, not only data-driven; (iii) applied to **capacitors specifically**; and (iv) — the real contribution — the **distribution audit**. The headline *"N % of papers presenting themselves as capacitor PHM do not exceed Level 2"* is quantitative, falsifiable, reproducible, and no existing review can state it.
 
-Supporting evidence: zero of eight reviews use any capability grading (§2, finding 2).
+Supporting evidence: zero of nine reviews use any capability grading (§2, finding 2).
 
 ### Contribution B — SOH / EOL definitional disambiguation *(primary)*
 
@@ -125,7 +129,7 @@ This is prerequisite to Contribution A: capability cannot be graded without defi
 The accurate and still-defensible claim has three legs:
 
 1. **Nobody integrates these attributes into an evaluation axis.** They appear as isolated table annotations under "limitations", with no consistent rubric across methods.
-2. **Nobody reports what actually determines embeddability.** Execution time: 2 occurrences across 8 reviews. Memory footprint: **0 across all 8**. Without these, no claim about MCU/DSP feasibility in the literature is verifiable.
+2. **Nobody reports what actually determines embeddability.** Execution time: 2 occurrences across 9 reviews. Memory footprint: **0 across all 9**. Without these, no claim about MCU/DSP feasibility in the literature is verifiable.
 3. **Nobody cross-tabulates deployability against capability.** The question *"does higher PHM capability cost deployability?"* cannot be answered from any existing review — and it is the question a practising engineer actually has.
 
 Leg 3 is the strongest form, and it depends on Contribution A. That coupling makes A and C a single argument rather than two lists.
@@ -150,7 +154,7 @@ Per chemistry (Al-Cap / MPPF / MLCC), map mechanism → parameter drift → meas
 
 **Decision taken: Path 2** (author, 2026-08-30 — [D-002](99_logs/decisions.md)). Target ranking: **IEEE JESTPE** → IEEE TIE → IEEE OJPEL → IEEE Trans. Reliability.
 
-The full texts **reinforce** this decision. TPEL published two adjacent reviews within 24 months, and Yu 2025 shows TPEL's current bar for a review in this exact topic includes an original simulation benchmark. A pure literature review would enter TPEL against that precedent. Path 2 avoids the comparison.
+The full texts **reinforce** this decision. TPEL published three adjacent reviews (2021, 2024, 2025), and Yu 2025 shows TPEL's current bar for a review in this exact topic includes an original simulation benchmark. A pure literature review would enter TPEL against that precedent. Path 2 avoids the comparison.
 
 **Downstream consequence — the part that is easy to get wrong.** Under Path 2 the reproducibility fields (`Sampling_Rate`, `Processor`, `Real_Time`, `Computation_Cost`, `Code_Available`, `Data_Available`) are best-effort, recorded `NR` when unreported. **`NR` is not missing data — it is the evidence.** With no benchmark of our own, Contribution C leg 2 rests entirely on what the literature fails to report. `NR` counts must be tallied per axis and reported. The §2 finding that memory footprint is absent from all eight reviews is exactly this measurement, performed at review level; Stage 4 repeats it at paper level.
 
@@ -160,10 +164,10 @@ The full texts **reinforce** this decision. TPEL published two adjacent reviews 
 
 | # | Criterion | Status |
 |---|---|---|
-| 1 | Major existing reviews verified | **Pass** — 8/8 at full text |
+| 1 | Major existing reviews verified | **Pass** — 9/9 at full text |
 | 2 | 2024–2026 dedicated search completed | **Pass** — Fassi 2024 + Yu 2025 identified and read |
-| 3 | Review gap matrix completed | **Pass** — 8 × 30, all `FULLTEXT` |
-| 4 | Clear difference vs 2016/2020/2023/2025 reviews | **Pass** — capability ladder 0/8; SOH 0/8 as a defined state; timing+memory 0/8 |
+| 3 | Review gap matrix completed | **Pass** — 9 × 30, all `FULLTEXT` |
+| 4 | Clear difference vs 2016/2021/2023/2024/2025 reviews | **Pass** — capability ladder 0/9; SOH 0/9 as a defined state; timing+memory 0/9 |
 | 5 | ≥1 evidence-supported independent taxonomy | **Pass** — Level 0–7 capability ladder |
 | 6 | Deployability adds incremental value | **Pass, re-based** — not "unmentioned" but "never integrated, never quantified, never cross-tabulated against capability" |
 | 7 | PHM/SOH/RUL literature sufficient for standalone chapters | **Open** — deferred to Stage 1; main residual risk (§7) |
@@ -190,9 +194,9 @@ If Stage 1 confirms this, it is **not fatal — it is the finding.** The paper b
 
 > *Based on the existing review literature, is a new capacitor PHM review scientifically justified, and what is the strongest defensible novelty of the proposed review?*
 
-**Justified: yes**, and more firmly than the 08-30 draft could claim, because the two reviews that could have overturned the verdict have now been read in full and do not.
+**Justified: yes**, and more firmly than the 08-30 draft could claim, because the two reviews that could have overturned the verdict have now been read in full and do not — and a ninth review found during Stage 1 retrieval (R09, Zhao 2021 TPEL, 252 citations) reproduces the same zero-coverage pattern.
 
-Eight reviews spanning 2014–2025 contain: no capability or maturity grading (0/8); no defined state-of-health (SOH absent from 7/8, and absent entirely from a 2025 TPEL health-monitoring review); no memory-footprint reporting (0/8); and no cross-tabulation of deployability against capability (0/8).
+Nine reviews spanning 2014–2025 contain: no capability or maturity grading (0/9); no defined state-of-health (SOH absent from 8/9, and absent entirely from a 2025 TPEL health-monitoring review); no memory-footprint reporting (0/9); and no cross-tabulation of deployability against capability (0/9).
 
 **Strongest defensible novelty:** *the first capacitor review that grades methods by **what health state they can actually resolve** (Level 0–7), reports the resulting capability distribution, and cross-tabulates that distribution against an integrated deployability assessment — quantifying the gap between what the field calls PHM and what it demonstrably delivers, and showing what that capability costs to deploy.*
 

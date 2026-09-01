@@ -91,3 +91,38 @@ Its §IV splits data-driven work into Condition Monitoring / Fault Detection & D
 - R05's six `hybrid model` hits remain confirmed false positives (switched-circuit models, not PIML).
 
 **Residual open item:** task book §28 criterion 7 (is there enough capacitor RUL literature for standalone chapters?) is a Stage 1 measurement, not a Stage 0 blocker. Stop condition recorded in STAGE0_REPORT §7.
+
+---
+
+## D-006 · 2026-09-01 · Stage 0 corpus corrected to 9 reviews; Crossref rejected for retrieval
+
+### A missed review, found by Stage 1 retrieval
+
+Stage 1's first OpenAlex probe surfaced a capacitor review absent from the Stage 0 corpus:
+
+> **Zhao, Davari, Lu, Wang & Blaabjerg — "An Overview of Condition Monitoring Techniques for Capacitors in DC-Link Applications," IEEE TPEL 36(4):3692-3716, 2021.** DOI `10.1109/TPEL.2020.3023469`. **252 citations.**
+
+Obtained (hybrid OA), verified, and analysed at full-text strength as **R09**. Its coverage matches the established pattern exactly: SOH=0, RUL=3, prognostics=3, physics-informed=0, execution time=0, memory=0, computational cost=0, capability grading=0. It is organised by **application domain** (ASD / PV inverter / PFC / DC-DC) x CM derivation principle — a fourth non-capability axis.
+
+**Effect on the verdict: strengthens it.** The zero-coverage findings now hold across **9** reviews spanning 2010-2025, and SOH is absent from **8 of 9**.
+
+**Effect on the venue decision: strengthens D-002.** TPEL has now published **three** adjacent reviews — Zhao 2021, Fassi 2024, Yu 2025. Not two.
+
+**Why it was missed at Stage 0.** Stage 0 searched via WebSearch, which surfaces by popularity rather than by index coverage. A dedicated title-level database sweep is what found it. Recorded as a limitation of WebSearch-based scoping.
+
+### Crossref rejected as a retrieval database
+
+Two Crossref retrieval attempts were run and both rejected. Full method and evidence in `01_search/search_strategy.md` §3.
+
+- **Attempt 1** (deep-paged to 1000/query): 10 874 records, 41 containing "capacitor", 1 included. Crossref `query.title` is relevance-ranked fuzzy OR; paging past the relevant head returns the index tail.
+- **Attempt 2** (relevance top-200/query): 5 001 records, 270 included, top-20 precision 19/20 — but recall against 12 known-relevant papers was **6/12**. Decisive test: `query.title=capacitor condition monitoring converter` does not return Soliman 2016 in the top 200 despite a near-exact title match, while querying its full title returns it at rank 2. Crossref relevance is not monotone in title overlap.
+
+**Decision:** OpenAlex is the retrieval database (deterministic boolean, returns the complete matching set). Crossref is retained for **metadata verification by DOI**, which it does reliably.
+
+**No statistic was computed from the Crossref corpus.** A capability distribution over a 50 %-recall sample is not a measurement, and reporting one would have been the same class of error as the retracted deployability claim in D-005.
+
+**Two rules adopted for the rest of the project:**
+
+1. Never deep-page a relevance-ranked endpoint.
+2. Validate every retrieval strategy against a held-out set of known-relevant records **before** computing any statistic from the corpus.
+
