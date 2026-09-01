@@ -142,3 +142,38 @@ Two Crossref retrieval attempts were run and both rejected. Full method and evid
 
 **Reversible if:** Stage 4 full-text re-grading, or the supplementary pass, lifts L5+ above ~25 papers with genuine SOH-terminal work. Re-evaluate at Stage 4, not before.
 
+---
+
+## D-008 · 2026-09-01 · D-007 REVERSED; thesis sharpened to "three layers that do not compose"
+
+**Trigger.** The refutation hunt and supplementary sweep, run before the outline precisely so this could happen.
+
+### What was wrong
+
+**L6 went from 15 to 52.** The corpus that produced the earlier number came from review reference lists, which under-counted prognostics by ~3.5x — the exact bias flagged as the standing risk. D-007 merged Sections 5 and 6 on the grounds that 17 papers could not carry two chapters. With 54 L6/L7 papers that reasoning no longer holds.
+
+**D-007 is reversed. Sections 5 and 6 stay separate.**
+
+### What survived, and in better shape
+
+The refutation hunt returned **1 claim_holds, 4 claim_weakened, 0 claim_refuted**, with 22 candidates of which **zero were rated strong**. L5 holds 1 confirmed paper of 216 (0.5 %), plus 3 unverified conference/paywalled candidates.
+
+The claim is restated, not withdrawn: from *"the rung is empty"* to **"the rung is vacant relative to both its neighbours"** — L2 holds 107 papers (49.5 %), L6 holds 52 (24.1 %), and between them sits 1.
+
+### The sharpened thesis
+
+Splitting L6 by what each paper consumes and emits showed it was hiding **two unrelated communities**, cleanly separated by venue:
+
+- **Design-stage lifetime prediction** (17): mission profile to Bx life / unreliability curve. JESTPE, Microelectronics Reliability, RESS. Never measures anything.
+- **Online prognostics** (13): measured degradation to per-unit RUL with credible intervals. PHM Society / IJPHM, IEEE TR, TDMR.
+
+With condition monitoring (107) that gives three well-populated layers **that do not compose**. None needs a health state: CM outputs a parameter and stops; design-life never measures; online prognostics goes measurement-to-life in one step, keeping any internal state private.
+
+**A defined SOH is exactly the interface that would let condition monitoring feed prognostics.** Its absence explains in one mechanism both the Stage 0 SOH vacancy (absent from 8 of 9 reviews) and the deployability vacancy (execution time twice across nine reviews, memory never): the layers do not compose, so nobody has had to cost the composition.
+
+This is a stronger thesis than the one it replaces, and it survives the larger L6 count that broke the original. **The title stands** — "The Missing State-of-Health Layer" describes the revised finding better than it described the original.
+
+### Not yet publishable
+
+The 0.5 % figure needs the four moderate L5 candidates settled from full text, and 24 of 54 L6 records lack the `terminal_output` field needed to quantify the design-life / online-RUL split. Both go to Stage 4.
+
