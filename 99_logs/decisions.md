@@ -126,3 +126,19 @@ Two Crossref retrieval attempts were run and both rejected. Full method and evid
 1. Never deep-page a relevance-ranked endpoint.
 2. Validate every retrieval strategy against a held-out set of known-relevant records **before** computing any statistic from the corpus.
 
+---
+
+## D-007 · 2026-09-01 · Sections 5 and 6 merge; the Stage 0 stop condition is triggered
+
+**Measurement.** 151 capacitor-relevant papers graded on the L0-L7 capability ladder by 30 agents, with every L5+ claim adversarially audited by two independent lenses. Result: 74.8 % of the literature does not exceed **L2 (parameter estimation)**; **L5 (SOH estimation) contains zero papers**; L6 (RUL) holds 15 and L7 holds 2.
+
+**Decision:** Sections 5 (SOH) and 6 (RUL) **merge into a single chapter on the prognostic capability deficit**. STAGE0_REPORT §7 set the stop condition at "fewer than ~25 papers at L5+"; the count is 17. Padding two thin chapters would be the failure mode the task book §24 warns about.
+
+**The empty L5 rung is the chapter's organising claim, not an apology for thin coverage.** Under audit every L5 candidate resolved either downward (what was called a health state is an ESR estimate with a threshold) or upward (the state exists only as an intermediate toward a predicted life). The field goes from parameter estimation straight to life prediction with no shared definition of health state in between — which is *why* SOH is absent from 8 of 9 reviews. Contribution B strengthens from a bibliometric observation into a structural finding.
+
+**The audit earned its cost:** 23 high-level claims examined, 7 corrected (6 down, 1 up) — a 30 % misgrading rate among self-described high-capability papers. That is Contribution A demonstrated rather than asserted, and the single upgrade shows the audit is not merely deflationary.
+
+**Directional caveat carried forward.** The corpus is built from review reference lists, so it is the canon *as reviews define it*. Because these reviews neglect prognostics, L5+ is under-counted: the deficit measured here is an upper bound on severity. No percentage may be published until the supplementary pass covers the PHM Society / NASA PCoE conference lineage, where a substantial share of the surviving L6 work sits. Full limitations in `04_analysis/stage1_capability_findings.md` §5.
+
+**Reversible if:** Stage 4 full-text re-grading, or the supplementary pass, lifts L5+ above ~25 papers with genuine SOH-terminal work. Re-evaluate at Stage 4, not before.
+
